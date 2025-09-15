@@ -1,113 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Engineer Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gradient-to-br from-purple-950 via-purple-900 to-red-950 text-gray-100">
-  <!-- Header -->
-  <header class="p-5 flex justify-between items-center bg-gradient-to-r from-purple-950 to-red-950 shadow-lg">
-    <!-- EDIT: Replace with your name -->
-    <h1 class="text-2xl font-bold">Amith Gerri</h1>
-    <nav class="space-x-4">
-      <a href="#about" class="hover:text-red-400">About</a>
-      <a href="#skills" class="hover:text-red-400">Skills</a>
-      <a href="#projects" class="hover:text-red-400">Projects</a>
-      <a href="#contact" class="hover:text-red-400">Contact</a>
-    </nav>
-  </header>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amith Gerri | AI Engineer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .section {
+        scroll-margin-top: 80px;
+      }
+      @media (max-width: 768px) {
+        .section {
+          scroll-margin-top: 60px;
+        }
+      }
+      .nav-link.active {
+        color: #22d3ee; /* text-cyan-400 */
+      }
+    </style>
+  </head>
+  <body class="bg-slate-900 text-slate-300">
+    
+    <header id="header" class="sticky top-0 z-50 transition-all duration-300 bg-transparent">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex-shrink-0">
+            <a href="#home" class="text-2xl font-bold text-white hover:text-cyan-400 transition-colors">
+              Amith Gerri
+            </a>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 text-slate-300 hover:text-white hover:bg-slate-700">About</a>
+              <a href="#skills" class="nav-link px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 text-slate-300 hover:text-white hover:bg-slate-700">Skills</a>
+              <a href="#projects" class="nav-link px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 text-slate-300 hover:text-white hover:bg-slate-700">Projects</a>
+              <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 text-slate-300 hover:text-white hover:bg-slate-700">Contact</a>
+              <a href="https://drive.google.com/file/d/1A1p-w43umad0D53h_EmxcQuB6kMv5A6c/view" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 text-slate-300 hover:text-white hover:bg-slate-700">Resume</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="flex flex-col items-center text-center py-16 px-6 bg-gradient-to-r from-purple-950 to-red-950">
-    <!-- Profile Picture -->
-    <div class="mb-6">
-      <!-- EDIT: Replace profile.jpg with your picture -->
-      <img src="profile.png" alt="Amith Gerri" class="w-40 h-40 rounded-full border-4 border-red-500 shadow-lg">
-    </div>
-    <!-- EDIT: Replace with your name -->
-    <h2 class="text-4xl font-bold mb-2">Amith</h2>
-    <!-- Tagline -->
-    <p class="text-lg text-gray-300 mb-4">3rd-Year Computer Science Student | AI Engineer in Progress</p>
-    <p class="max-w-2xl text-gray-300">Passionate about Artificial Intelligence, Deep Learning, and building intelligent systems that solve real-world problems.</p>
-    <div class="mt-6 space-x-4">
-      <!-- EDIT your links below -->
-      <a href="https://github.com/amith2144" target="_blank" class="bg-purple-800 hover:bg-red-600 px-4 py-2 rounded-lg shadow">GitHub</a>
-      <a href="https://www.linkedin.com/in/amith-gerri-093b88314/" target="_blank" class="bg-purple-800 hover:bg-red-600 px-4 py-2 rounded-lg shadow">LinkedIn</a>
-      <a href="https://drive.google.com/file/d/1A1p-w43umad0D53h_EmxcQuB6kMv5A6c/view?usp=sharing" target="_blank" class="bg-purple-800 hover:bg-red-600 px-4 py-2 rounded-lg shadow">Resume</a>
-    </div>
-  </section>
+    <main>
+      <section id="home" class="section min-h-screen flex items-center bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+              <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4">
+                Hi, I'm Amith, an <span class="text-cyan-400">AI Engineer</span> in Progress
+              </h1>
+              <p class="text-lg md:text-xl text-slate-400 max-w-xl mx-auto md:mx-0 mb-8">
+                Third-year Computer Science student specializing in AI. Passionate about building intelligent systems that solve real-world problems.
+              </p>
+              <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#projects" class="w-full sm:w-auto bg-cyan-500 text-white font-bold py-3 px-8 rounded-full hover:bg-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30">
+                  View My Work
+                </a>
+                <a href="https://drive.google.com/file/d/1A1p-w43umad0D53h_EmxcQuB6kMv5A6c/view" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto border border-cyan-500 text-cyan-500 font-bold py-3 px-8 rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105">
+                  View Resume
+                </a>
+              </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center mt-12 md:mt-0">
+              <div class="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-gradient-to-br from-cyan-500 to-slate-800 p-2 shadow-2xl">
+                <!-- TODO: To use a profile picture, replace the <svg> block below with an <img> tag like this: -->
+                <!-- <img src="YOUR_IMAGE_URL_HERE" alt="Amith Gerri, AI Engineer Student" class="w-full h-full object-cover rounded-full" /> -->
+                <div class="w-full h-full bg-slate-900 rounded-full flex items-center justify-center">
+                  <svg class="w-1/2 h-1/2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <text x="50" y="50" dominant-baseline="central" text-anchor="middle" font-family="Inter, sans-serif" font-size="60" font-weight="900" fill="#22d3ee">
+                          AG
+                      </text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-16 px-6 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
-    <p class="text-lg leading-relaxed text-center text-gray-300">I am a 3rd-year Computer Science student specializing in Artificial Intelligence. My journey in AI has been driven by curiosity and a passion for solving complex problems. I focus on areas like machine learning, deep learning, computer vision, and natural language processing. My goal is to become a skilled AI Engineer contributing to projects that make a positive global impact.</p>
-  </section>
+      <section id="about" class="section py-20 bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-center text-white mb-2">About Me</h2>
+          <div class="w-24 h-1 bg-cyan-400 mx-auto mb-12"></div>
+          <div class="flex flex-col md:flex-row items-center gap-12">
+              <div class="md:w-1/3">
+                  <!-- TODO: Replace the 'src' attribute with your 'About Me' image URL -->
+                  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="A developer working on data visualization" class="rounded-lg shadow-2xl mx-auto" />
+              </div>
+              <div class="md:w-2/3 text-lg text-slate-400 space-y-4">
+                  <p>I'm a third-year Computer Science student with a deep specialization in Artificial Intelligence. My journey in AI has been driven by curiosity and a passion for solving complex problems. I focus on areas like machine learning, deep learning, computer vision, and natural language processing.</p>
+                  <p>My coursework has provided me with a strong foundation in algorithms, data structures, and software engineering principles. I enjoy the entire lifecycle of an ML project, from data preprocessing and model training to evaluation and deployment.</p>
+                  <p>I'm always working on personal projects to expand my skills and stay updated with the latest research. My goal is to become a skilled AI professional who can build intelligent systems that make a real-world impact. I am actively seeking challenging internship or co-op opportunities.</p>
+              </div>
+          </div>
+        </div>
+      </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-16 px-6 bg-purple-950/70">
-    <h2 class="text-3xl font-bold mb-6 text-center">Skills</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-      <div class="bg-purple-900 p-6 rounded-lg shadow hover:shadow-xl">
-        <h3 class="font-semibold mb-2">Programming</h3>
-        <p>Python, Java</p>
-      </div>
-      <div class="bg-purple-900 p-6 rounded-lg shadow hover:shadow-xl">
-        <h3 class="font-semibold mb-2">AI & ML</h3>
-        <p>Machine Learning, Deep Learning, NLP, Computer Vision</p>
-      </div>
-      <div class="bg-purple-900 p-6 rounded-lg shadow hover:shadow-xl">
-        <h3 class="font-semibold mb-2">Frameworks</h3>
-        <p>TensorFlow, PyTorch, Scikit-learn</p>
-      </div>
-      <div class="bg-purple-900 p-6 rounded-lg shadow hover:shadow-xl">
-        <h3 class="font-semibold mb-2">Tools</h3>
-        <p>Git, Docker, Linux</p>
-      </div>
-      <div class="bg-purple-900 p-6 rounded-lg shadow hover:shadow-xl">
-        <h3 class="font-semibold mb-2">Databases</h3>
-        <p>MySQL, MongoDB</p>
-      </div>
-    </div>
-  </section>
+      <section id="skills" class="section py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-center text-white mb-2">My Tech Stack</h2>
+          <div class="w-24 h-1 bg-cyan-400 mx-auto mb-12"></div>
+          <div class="space-y-12">
+            <div>
+              <h3 class="text-2xl font-semibold text-white mb-6 text-center md:text-left">Programming</h3>
+              <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-slate-800 p-4 rounded-lg flex items-center space-x-4 hover:bg-slate-700 transition-colors duration-300 transform hover:-translate-y-1"><div class="text-cyan-400 font-bold text-lg">PY</div><span class="font-medium text-slate-200">Python</span></div>
+                <div class="bg-slate-800 p-4 rounded-lg flex items-center space-x-4 hover:bg-slate-700 transition-colors duration-300 transform hover:-translate-y-1"><div class="text-cyan-400 font-bold text-lg">JV</div><span class="font-medium text-slate-200">Java</span></div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-white mb-6 text-center md:text-left">AI, ML & Frameworks</h3>
+              <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-slate-800 p-4 rounded-lg flex items-center space-x-4 hover:bg-slate-700 transition-colors duration-300 transform hover:-translate-y-1"><div class="text-cyan-400 font-bold text-lg">ML</div><span class="font-medium text-slate-200">Machine Learning</span></div>
+                <div class="bg-slate-800 p-4 rounded-lg flex items-center space-x-4 hover:bg-slate-700 transition-colors duration-300 transform hover:-translate-y-1"><div class="text-cyan-400 font-bold text-lg">DL</div><span class="font-medium text-slate-200">Deep Learning</span></div>
+                <div class="bg-slate-800 p-4 rounded-lg flex items-center space-x-4 hover:bg-slate-700 transition-colors duration-300 transform hover:-translate-y-1"><div class="text-cyan-400 font-bold text-lg">NLP</div><span class="font-medium text-slate-200">NLP</span></div>
+                <div class="bg-slate-800 p-4 rounded-lg flex items-center space-x-4 hover:bg-slate-700 transition-colors duration-300 transform hover:-translate-y-1"><div class="text-cyan-400 font-bold text-lg">CV</div><span class="font-medium text-slate-200">Computer Vision</span></div>
+                <div class="bg-slate-800 p-4 rounded-lg flex items-center space-x-4 hover:bg-slate-700 transition-colors duration-300 transform hover:-translate-y-1"><div class="text-cyan-400 font-bold text-lg">TF</div><span class="font-medium text-slate-200">TensorFlow</span></div>
+                <div class="bg-slate-800 p-4 rounded-lg flex items-center space-x-4 hover:bg-slate-700 transition-colors duration-300 transform hover:-translate-y-1"><div class="text-cyan-400 font-bold text-lg">PT</div><span class="font-medium text-slate-200">PyTorch</span></div>
+                <div class="bg-slate-800 p-4 rounded-lg flex items-center space-x-4 hover:bg-slate-700 transition-colors duration-300 transform hover:-translate-y-1"><div class="text-cyan-400 font-bold text-lg">SK</div><span class="font-medium text-slate-200">Scikit-learn</span></div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-white mb-6 text-center md:text-left">Databases & Tools</h3>
+              <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="bg-slate-800 p-4 rounded-lg flex items-center space-x-4 hover:bg-slate-700 transition-colors duration-300 transform hover:-translate-y-1"><div class="text-cyan-400 font-bold text-lg">SQL</div><span class="font-medium text-slate-200">MySQL</span></div>
+                <div class="bg-slate-800 p-4 rounded-lg flex items-center space-x-4 hover:bg-slate-700 transition-colors duration-300 transform hover:-translate-y-1"><div class="text-cyan-400 font-bold text-lg">MD</div><span class="font-medium text-slate-200">MongoDB</span></div>
+                <div class="bg-slate-800 p-4 rounded-lg flex items-center space-x-4 hover:bg-slate-700 transition-colors duration-300 transform hover:-translate-y-1"><div class="text-cyan-400 font-bold text-lg">GIT</div><span class="font-medium text-slate-200">Git</span></div>
+                <div class="bg-slate-800 p-4 rounded-lg flex items-center space-x-4 hover:bg-slate-700 transition-colors duration-300 transform hover:-translate-y-1"><div class="text-cyan-400 font-bold text-lg">DCK</div><span class="font-medium text-slate-200">Docker</span></div>
+                <div class="bg-slate-800 p-4 rounded-lg flex items-center space-x-4 hover:bg-slate-700 transition-colors duration-300 transform hover:-translate-y-1"><div class="text-cyan-400 font-bold text-lg">LNX</div><span class="font-medium text-slate-200">Linux</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-16 px-6 max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Project 1 -->
-      <div class="bg-purple-900 p-6 rounded-lg shadow hover:shadow-xl">
-        <h3 class="font-semibold text-xl mb-2">Fruit & Veg Classifier</h3>
-        <p class="mb-2 text-gray-300">Deep learning model using EfficientNetB3 to classify fruits and vegetables with high accuracy. Built with TensorFlow/Keras.</p>
-        <a href="#" class="text-red-400 hover:underline">View Project</a>
-      </div>
-      <!-- Project 2 -->
-      <div class="bg-purple-900 p-6 rounded-lg shadow hover:shadow-xl">
-        <h3 class="font-semibold text-xl mb-2">Cat vs Dog Classifier</h3>
-        <p class="mb-2 text-gray-300">Built a binary image classification model using custom CNNs and transfer learning with EfficientNet. Applied preprocessing, augmentation, and error analysis, and deployed the model in a Flask/Streamlit web app for real-time predictions.</p>
-        <a href="#" class="text-red-400 hover:underline">View Project</a>
-      </div>
-      <!-- Project 3 -->
-      <div class="bg-purple-900 p-6 rounded-lg shadow hover:shadow-xl">
-        <h3 class="font-semibold text-xl mb-2">E-Tutor</h3>
-        <p class="mb-2 text-gray-300">An AI-assisted online learning platform offering recorded lessons, experiments, and student-focused modules to enhance education.</p>
-        <a href="#" class="text-red-400 hover:underline">View Project</a>
-      </div>
-    </div>
-  </section>
+      <section id="projects" class="section py-20 bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-center text-white mb-2">My Projects</h2>
+          <div class="w-24 h-1 bg-cyan-400 mx-auto mb-12"></div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
+            <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 group flex flex-col max-w-lg">
+              <div class="relative overflow-hidden">
+                <!-- TODO: Replace the 'src' attribute with your project image URL -->
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Fruit & Veg Classifier" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-white mb-2">Fruit & Veg Classifier</h3>
+                <p class="text-slate-400 mb-4 flex-grow">Deep learning model using EfficientNetB3 to classify fruits and vegetables with high accuracy. Built with TensorFlow and Keras.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">TensorFlow</span>
+                  <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Keras</span>
+                  <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">EfficientNetB3</span>
+                  <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Computer Vision</span>
+                </div>
+                <div class="mt-auto pt-4 flex items-center justify-end space-x-4 border-t border-slate-700">
+                  <a href="https://github.com/amith2144/fruits-and-vegetables-identification" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300" title="View Code on GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 group flex flex-col max-w-lg">
+              <div class="relative overflow-hidden">
+                <!-- TODO: Replace the 'src' attribute with your project image URL -->
+                <img src="https://images.unsplash.com/photo-1522276498395-f4f68f7f8454?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Cat vs Dog Classifier" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-white mb-2">Cat vs Dog Classifier</h3>
+                <p class="text-slate-400 mb-4 flex-grow">A binary image classifier using CNNs and transfer learning. Deployed as a Flask/Streamlit web app for real-time predictions.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">CNN</span>
+                  <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Transfer Learning</span>
+                  <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Flask</span>
+                  <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Streamlit</span>
+                </div>
+                <div class="mt-auto pt-4 flex items-center justify-end space-x-4 border-t border-slate-700">
+                  <a href="https://github.com/amith2144/cat-vs-dog-classification" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300" title="View Code on GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 px-6 bg-gradient-to-r from-purple-950 to-red-950 text-center">
-    <h2 class="text-3xl font-bold mb-6">Contact</h2>
-    <p class="mb-4">Feel free to reach out to me at:</p>
-    <!-- EDIT your email below -->
-    <a href="mailto:youremail@example.com" class="text-xl font-semibold text-red-400 hover:underline">amithgerri2144@gmail.com</a>
-  </section>
+      <section id="contact" class="section py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl font-bold text-white mb-2">Get In Touch</h2>
+          <div class="w-24 h-1 bg-cyan-400 mx-auto mb-8"></div>
+          <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10">
+            I'm currently open to new opportunities and collaborations. If you have a project in mind, or just want to say hi, feel free to reach out. Let's build something great together!
+          </p>
+          <a href="mailto:amithgerri2144@gmail.com" class="inline-block bg-cyan-500 text-white font-bold py-3 px-8 rounded-full hover:bg-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30 mb-12">
+            Say Hello
+          </a>
+          <div class="flex justify-center space-x-6">
+              <a href="https://github.com/amith2144" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg></a>
+              <a href="https://www.linkedin.com/in/amith-gerri-093b88314/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.88-11.018-3.714v-2.155z"></path></svg></a>
+              <a href="mailto:amithgerri2144@gmail.com" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"></path></svg></a>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <!-- Footer -->
-  <footer class="p-4 bg-purple-950 text-center text-gray-400">
-    <p>© 2025 Amith Gerri. All rights reserved.</p>
-  </footer>
-</body>
+    <footer class="bg-slate-800/50">
+      <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-400 text-sm">
+        <p>&copy; <span id="current-year"></span> Amith Gerri. All Rights Reserved.</p>
+        <p class="mt-1">Built with HTML, Tailwind CSS, and vanilla JavaScript.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Set current year in footer
+        const yearSpan = document.getElementById('current-year');
+        if (yearSpan) {
+          yearSpan.textContent = new Date().getFullYear();
+        }
+
+        const header = document.getElementById('header');
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Header scroll effect
+        const handleScroll = () => {
+          if (window.scrollY > 10) {
+            header.classList.add('bg-slate-900/80', 'backdrop-blur-sm', 'shadow-lg');
+          } else {
+            header.classList.remove('bg-slate-900/80', 'backdrop-blur-sm', 'shadow-lg');
+          }
+
+          // Active section highlighting
+          let currentSectionId = 'home';
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            if (window.scrollY >= sectionTop) {
+              currentSectionId = section.id;
+            }
+          });
+
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentSectionId}`) {
+              link.classList.add('active');
+            }
+          });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
